@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "./ui/button"
+import { RainbowButton } from "./ui/rainbow-button"
 
 const Hero = () => {
   return (
@@ -27,7 +27,9 @@ const Hero = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center md:items-start gap-3">
           <Link href="/products">
-            <Button className="px-6 py-2.5 text-base">Browse Products</Button>
+            <RainbowButton className="px-6 py-2.5 text-base">
+              Browse Products
+            </RainbowButton>
           </Link>
         </div>
       </div>
