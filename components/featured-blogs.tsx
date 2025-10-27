@@ -68,7 +68,44 @@ export default function FeaturedBlogs() {
       featured: false,
     },
   ]
-
+  const blogs = [
+    {
+      id: 1,
+      title: "Getting Started with Next.js 16",
+      description:
+        "Explore the latest features in Next.js 16, including improved caching APIs, React Compiler support, and Turbopack as the default bundler.",
+      image: "/newshoe.jpg",
+      category: "Development",
+      date: "Oct 25, 2025",
+    },
+    {
+      id: 2,
+      title: "Building Scalable Applications",
+      description:
+        "Learn best practices for building scalable web applications with modern architecture patterns and performance optimization techniques.",
+      image: "/newshoe.jpg",
+      category: "Architecture",
+      date: "Oct 22, 2025",
+    },
+    {
+      id: 3,
+      title: "AI Integration in Web Apps",
+      description:
+        "Discover how to integrate AI capabilities into your web applications using the Vercel AI SDK and modern language models.",
+      image: "/newshoe.jpg",
+      category: "AI & ML",
+      date: "Oct 20, 2025",
+    },
+    {
+      id: 4,
+      title: "Database Design Fundamentals",
+      description:
+        "Master the essentials of database design, from schema planning to optimization strategies for production environments.",
+      image: "/newshoe.jpg",
+      category: "Database",
+      date: "Oct 18, 2025",
+    },
+  ]
   return (
     <div className="px-6 mt-32">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -78,9 +115,9 @@ export default function FeaturedBlogs() {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {products.map((product) => (
-            <BlogCard />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {blogs.map((blog) => (
+            <BlogCard key={blog.id} blog={blog} />
           ))}
         </div>
       </div>
