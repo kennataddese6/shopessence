@@ -5,20 +5,20 @@ import { RainbowButton } from "./ui/rainbow-button"
 const Hero = () => {
   return (
     <section
-      className="max-w-7xl mx-auto px-4 md:px-8 py-20  flex flex-col md:flex-row items-center justify-between gap-8"
+      className="max-w-7xl mx-auto px-4 md:px-8 py-20 flex flex-col md:flex-row items-center justify-between gap-8"
       aria-labelledby="hero-heading"
     >
       {/* LEFT SIDE – Content */}
       <div className="flex-1 text-center md:text-left">
         <h1
           id="hero-heading"
-          className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-snug"
+          className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4 leading-snug"
         >
           Insights That Help You Live, Work & Feel{" "}
-          <span className="text-blue-600">Better</span>
+          <span className="text-blue-600 dark:text-blue-400">Better</span>
         </h1>
 
-        <p className="text-gray-600 text-base md:text-lg mb-6 max-w-md mx-auto md:mx-0">
+        <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg mb-6 max-w-md mx-auto md:mx-0">
           From practical tips to in-depth product reviews, Essence helps you
           understand what works, why it matters, and where to get it — all
           linked directly to trusted Amazon products.
@@ -42,7 +42,7 @@ const Hero = () => {
           width={1200}
           height={1200}
           priority
-          className="rounded-lg  object-cover w-full h-auto"
+          className="rounded-lg object-cover w-full h-auto"
         />
       </div>
     </section>
