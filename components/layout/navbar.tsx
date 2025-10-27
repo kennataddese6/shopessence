@@ -1,11 +1,11 @@
 "use client"
 
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 import clsx from "clsx"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
-
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Products" },
@@ -49,6 +49,7 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+          <AnimatedThemeToggler />
         </ul>
 
         {/* Mobile Menu Button */}
