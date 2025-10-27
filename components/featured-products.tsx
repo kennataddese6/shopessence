@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Star } from "lucide-react"
 import Image from "next/image"
-
 export default function Productcard() {
   const products = [
     {
@@ -138,7 +137,7 @@ export default function Productcard() {
                     ${product.price}
                   </span>
                   <Button className="rounded-full px-6 py-2 text-sm font-medium">
-                    Add to Cart
+                    View
                   </Button>
                 </div>
               </CardContent>
