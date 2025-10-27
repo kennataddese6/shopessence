@@ -1,5 +1,6 @@
 import FeaturedBlogs from "@/components/featured-blogs"
 import FeaturedProducts from "@/components/featured-products"
+import Footer from "@/components/footer"
 import Hero from "@/components/hero"
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <FeaturedProducts />
       <FeaturedBlogs />
+      <Footer />
     </div>
   )
 }
