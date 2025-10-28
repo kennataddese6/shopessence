@@ -50,7 +50,7 @@ export function BlogCard({ blog }: BlogCardProps) {
 
         {/* Read More Link */}
         <Link
-          href={`/blog/${blog.id}`}
+          href={`/blogs/${blog.id}`}
           className="inline-flex items-center gap-2  font-semibold hover:gap-3 transition-all duration-200 group/link"
         >
           Read More
