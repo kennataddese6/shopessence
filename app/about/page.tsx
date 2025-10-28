@@ -149,7 +149,7 @@ export default function About() {
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 max-w-7xl mx-auto">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4 text-foreground">
             Popular Wellness Products
