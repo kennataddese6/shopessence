@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Star } from "lucide-react"
 import Image from "next/image"
-export default function ProductPage() {
+import Link from "next/link"
+export default function ProductsPage() {
   const products = [
     {
       id: 1,
@@ -136,9 +137,11 @@ export default function ProductPage() {
                   <span className="text-foreground text-2xl font-bold">
                     ${product.price}
                   </span>
-                  <Button className="rounded-full px-6 py-2 text-sm font-medium">
-                    View
-                  </Button>
+                  <Link href={`/products/${product.id}`}>
+                    <Button className="rounded-full px-6 py-2 text-sm font-medium">
+                      View
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
