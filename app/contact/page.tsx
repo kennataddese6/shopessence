@@ -2,8 +2,8 @@
 
 import type React from "react"
 
-// import { InteractiveGlobe } from "@/components/interactive-globe"
 import { Button } from "@/components/ui/button"
+import { Globe } from "@/components/ui/globe"
 import { Input } from "@/components/ui/input"
 import { Mail, MapPin, Phone, Send } from "lucide-react"
 import { useState } from "react"
@@ -37,10 +37,10 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen   bg-background">
       {/* Hero Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-b border-border">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl px-6 mx-auto">
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 text-balance">
             Get in Touch
           </h1>
@@ -53,7 +53,7 @@ export default function ContactPage() {
 
       {/* Main Content */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl px-6 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
@@ -207,8 +207,8 @@ export default function ContactPage() {
                 <h3 className="text-lg font-semibold text-foreground mb-4">
                   We're Global
                 </h3>
-                <div className="w-full h-64 rounded-lg overflow-hidden border border-border shadow-lg">
-                  {/* <InteractiveGlobe /> */}
+                <div className="relative w-full h-64 rounded-lg overflow-hidden border border-border ">
+                  <Globe />
                 </div>
               </div>
             </div>
