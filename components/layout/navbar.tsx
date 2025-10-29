@@ -29,7 +29,7 @@ const Navbar = () => {
           href="/"
           className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
         >
-          Logo
+          E
         </Link>
 
         {/* Desktop Nav */}
