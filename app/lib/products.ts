@@ -8,7 +8,7 @@ export const productsData = [
     rating: 4,
     reviews: 8166,
     image: "https://m.media-amazon.com/images/I/719IqROWz0L._AC_SX466_.jpg",
-    featured: true,
+    featured: false,
     images: [
       "https://m.media-amazon.com/images/I/61bEle2Z2mL._AC_SX466_.jpg",
       "https://m.media-amazon.com/images/I/71bsQpYFbHL._AC_SX466_.jpg",
@@ -84,7 +84,7 @@ export const productsData = [
     rating: 4,
     reviews: 117912,
     image: "https://m.media-amazon.com/images/I/81gGNXSjASL._AC_SL1500_.jpg",
-    featured: true,
+    featured: false,
     images: [
       "https://m.media-amazon.com/images/I/81gGNXSjASL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71ybuaqVLwL._AC_SX679_.jpg",
@@ -140,7 +140,7 @@ export const productsData = [
     rating: 4,
     reviews: 126676,
     image: "https://m.media-amazon.com/images/I/61Q-fduwMXL._AC_SX679_.jpg",
-    featured: true,
+    featured: false,
     images: [
       "https://m.media-amazon.com/images/I/61Q-fduwMXL._AC_SX679_.jpg",
       "https://m.media-amazon.com/images/I/61G7N1LZQJL._AC_SX679_.jpg",
