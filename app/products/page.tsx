@@ -1,9 +1,17 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Star } from "lucide-react"
+import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { productsData } from "../lib/products"
+
+export const metadata: Metadata = {
+  title: "Shop Essence Products",
+  description:
+    "Your One-Stop Shop for Premium products from Amazon. Aiming to provide the best shopping experience with top-quality items curated just for you.",
+}
+
 export default function ProductsPage() {
   const products = productsData
 
