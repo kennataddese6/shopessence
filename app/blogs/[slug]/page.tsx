@@ -13,7 +13,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const { id } = await params
   const blog = blogs.find((b) => b.id === "1")
   const relatedProduct = blog?.relatedProductId
-    ? productsData[blog.relatedProductId]
+    ? productsData[Number(blog.relatedProductId)]
     : null
 
   if (!blog) {

@@ -3,75 +3,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Star } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { productsData } from "../lib/products"
 export default function ProductsPage() {
-  const products = [
-    {
-      id: 1,
-      name: "HydraGlow Vitamin C Serum",
-      description:
-        "Brightens skin tone and reduces dark spots with potent vitamin C and hyaluronic acid.",
-      price: 32,
-      rating: 5,
-      reviews: 184,
-      image: "/newshoe.jpg",
-      featured: true,
-    },
-    {
-      id: 2,
-      name: "AquaBoost Hydrating Gel",
-      description:
-        "Lightweight gel moisturizer for all-day hydration and a dewy finish.",
-      price: 28,
-      rating: 4,
-      reviews: 97,
-      image: "/newshoe.jpg",
-      featured: false,
-    },
-    {
-      id: 3,
-      name: "PureShield SPF 50+ Sunscreen",
-      description:
-        "Broad-spectrum sun protection with a non-greasy, invisible finish.",
-      price: 22,
-      rating: 5,
-      reviews: 210,
-      image: "/newshoe.jpg",
-      featured: false,
-    },
-    {
-      id: 4,
-      name: "Renewal Night Repair Cream",
-      description:
-        "Deeply nourishing night cream that repairs and revitalizes skin while you sleep.",
-      price: 36,
-      rating: 4,
-      reviews: 75,
-      image: "/newshoe.jpg",
-      featured: true,
-    },
-    {
-      id: 5,
-      name: "Radiance Boosting Face Mist",
-      description:
-        "Refreshing face mist with rose water and aloe vera for instant hydration and glow.",
-      price: 18,
-      rating: 4,
-      reviews: 120,
-      image: "/newshoe.jpg",
-      featured: false,
-    },
-    {
-      id: 6,
-      name: "Soothing Lemon Gel",
-      description:
-        "Natural aloe vera gel to soothe and hydrate irritated skin.",
-      price: 15,
-      rating: 5,
-      reviews: 85,
-      image: "/newshoe.jpg",
-      featured: false,
-    },
-  ]
+  const products = productsData
 
   return (
     <div className="px-6 mt-12">

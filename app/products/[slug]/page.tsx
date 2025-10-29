@@ -13,7 +13,7 @@ export default function ProductPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = use(params)
-  const product = productsData[slug]
+  const product = productsData[Number(slug) - 1]
   const [selectedVariant, setSelectedVariant] = useState(product.variants[0])
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
 
@@ -45,7 +45,7 @@ export default function ProductPage({
   return (
     <main className="min-h-screen max-w-7xl mx-auto bg-background">
       <div className="container mx-auto px-4 py-12">
-        <Link href="/">
+        <Link href="/products">
           <Button variant="ghost" className="mb-6">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Products
