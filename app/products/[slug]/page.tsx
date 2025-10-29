@@ -2,8 +2,50 @@ import { productsData } from "@/app/lib/products"
 import ProductStore from "@/components/product-store"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
+import { Metadata } from "next"
 import Link from "next/link"
 import { use } from "react"
+
+type Props = {
+  params: { slug: string }
+}
+
+// 🧠 Use this to generate SEO metadata dynamically
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = params.slug
+  const product = productsData[Number(slug) - 1]
+
+  if (!product) {
+    return {
+      title: "Product Not Found | Essence Store",
+      description: "The product you’re looking for could not be found.",
+    }
+  }
+
+  return {
+    title: `${product.name} | Essence Store`,
+    description: product.description,
+    openGraph: {
+      title: `${product.name} | Essence Store`,
+      description: product.description,
+      images: [
+        {
+          url: product.image,
+          width: 800,
+          height: 600,
+          alt: product.name,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.name} | Essence Store`,
+      description: product.description,
+      images: [product.image],
+    },
+  }
+}
 
 export default function ProductPage({
   params,
