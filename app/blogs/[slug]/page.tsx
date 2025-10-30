@@ -6,12 +6,12 @@ import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
 interface BlogDetailPageProps {
-  params: Promise<{ id: string }>
+  params: Promise<{ slug: string }>
 }
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
-  const { id } = await params
-  const blog = blogs.find((b) => b.id === "1")
+  const { slug } = await params
+  const blog = blogs.find((b) => b.id === slug)
   const relatedProduct = blog?.relatedProductId
     ? productsData[Number(blog.relatedProductId)]
     : null
@@ -49,7 +49,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           {/* Hero Image */}
           <div className="aspect-video overflow-hidden rounded-lg mb-8 bg-muted">
             <img
-              src={"/newshoe.jpg"}
+              src={blog.image}
               alt={blog.title}
               className="w-full h-full object-cover"
             />
@@ -102,7 +102,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
                   <div className="aspect-square overflow-hidden rounded-lg bg-muted">
                     <img
-                      src={"/newshoe.jpg"}
+                      src={relatedProduct.image}
                       alt={relatedProduct.name}
                       className="w-full h-full object-cover"
                     />

@@ -6,7 +6,7 @@ import Link from "next/link"
 
 interface BlogCardProps {
   blog: {
-    id: number
+    id: string
     title: string
     description: string
     image: string
