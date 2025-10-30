@@ -376,7 +376,7 @@ export const blogs: BlogPost[] = [
     date: "2025-05-05",
     readTime: 5,
     category: "Home & Lifestyle",
-    image: "/hilife-steamer.png",
+    image: "/hilife-steamers.png",
     content: [
       {
         type: "heading",
@@ -444,7 +444,7 @@ export const blogs: BlogPost[] = [
     date: "2025-06-12",
     readTime: 7,
     category: "Fitness & Lifestyle",
-    image: "/yoleo-weight-bench.png",
+    image: "/yoleo-weight-benchs.png",
     content: [
       {
         type: "heading",
