@@ -11,6 +11,7 @@ export interface BlogPost {
   description: string
   content: BlogContent[]
   relatedProductId: string
+  featured: boolean
 }
 
 export interface BlogContent {
@@ -31,6 +32,7 @@ export const blogs: BlogPost[] = [
     readTime: 7,
     category: "Health & Fitness",
     image: "/weighted-vest-blog.png",
+    featured: true,
     content: [
       {
         type: "heading",
@@ -100,6 +102,7 @@ export const blogs: BlogPost[] = [
     readTime: 5,
     category: "Lifestyle",
     image: "/cosori-pressure-cooker.png",
+    featured: false,
     content: [
       {
         type: "heading",
@@ -157,6 +160,7 @@ export const blogs: BlogPost[] = [
     readTime: 8,
     category: "Tech & Lifestyle",
     image: "/meta-quest-3s.png",
+    featured: true,
     content: [
       {
         type: "heading",
@@ -233,6 +237,7 @@ export const blogs: BlogPost[] = [
     readTime: 7,
     category: "Home & Living",
     image: "/shark-nv360.png",
+    featured: false,
     content: [
       {
         type: "heading",
@@ -309,6 +314,7 @@ export const blogs: BlogPost[] = [
     readTime: 6,
     category: "Travel & Lifestyle",
     image: "/jack-rose-steamer.png",
+    featured: false,
     content: [
       {
         type: "heading",
@@ -377,6 +383,7 @@ export const blogs: BlogPost[] = [
     readTime: 5,
     category: "Home & Lifestyle",
     image: "/hilife-steamers.png",
+    featured: true,
     content: [
       {
         type: "heading",
@@ -445,6 +452,7 @@ export const blogs: BlogPost[] = [
     readTime: 7,
     category: "Fitness & Lifestyle",
     image: "/yoleo-weight-benchs.png",
+    featured: true,
     content: [
       {
         type: "heading",
@@ -505,6 +513,7 @@ export const blogs: BlogPost[] = [
     readTime: 6,
     category: "Beauty & Lifestyle",
     image: "/bs-mall-makeup-brush.png",
+    featured: false,
     content: [
       {
         type: "heading",
@@ -573,6 +582,7 @@ export const blogs: BlogPost[] = [
     readTime: 5,
     category: "Beauty & Lifestyle",
     image: "/miracle-complexion-sponge.png",
+    featured: false,
     content: [
       {
         type: "heading",
