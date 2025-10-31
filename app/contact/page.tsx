@@ -7,6 +7,7 @@ import { Globe } from "@/components/ui/globe"
 import { Input } from "@/components/ui/input"
 import { Mail, MapPin, Phone, Send } from "lucide-react"
 import { useState } from "react"
+import { toast } from "sonner"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -29,11 +30,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData)
-    setSubmitted(true)
-    setFormData({ name: "", email: "", subject: "", message: "" })
-    setTimeout(() => setSubmitted(false), 3000)
+    toast.info("Submission coming soon!")
   }
 
   return (

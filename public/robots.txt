@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://shop.essenceplc.com
+
+# Sitemaps
+Sitemap: https://shop.essenceplc.com/sitemap.xml

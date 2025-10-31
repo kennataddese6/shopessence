@@ -20,7 +20,9 @@ import {
   Sun,
   Twitter,
 } from "lucide-react"
+import Link from "next/link"
 import * as React from "react"
+import { toast } from "sonner"
 
 export default function Footerdemo() {
   const [isDarkMode, setIsDarkMode] = React.useState(true)
@@ -45,7 +47,13 @@ export default function Footerdemo() {
             <p className="mb-6 text-muted-foreground">
               Join our newsletter for the latest updates and exclusive offers.
             </p>
-            <form className="relative">
+            <form
+              className="relative"
+              onSubmit={(e) => {
+                e.preventDefault()
+                toast.info("Newsletter subscription coming soon.")
+              }}
+            >
               <Input
                 type="email"
                 placeholder="Enter your email"
@@ -65,45 +73,45 @@ export default function Footerdemo() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
             <nav className="space-y-2 text-sm">
-              <a
-                href="#"
+              <Link
+                href="/"
                 className="block transition-colors hover:text-primary"
               >
                 Home
-              </a>
+              </Link>
               <a
-                href="#"
-                className="block transition-colors hover:text-primary"
-              >
-                About Us
-              </a>
-              <a
-                href="#"
-                className="block transition-colors hover:text-primary"
-              >
-                Services
-              </a>
-              <a
-                href="#"
+                href="/products"
                 className="block transition-colors hover:text-primary"
               >
                 Products
               </a>
               <a
-                href="#"
+                href="/blogs"
+                className="block transition-colors hover:text-primary"
+              >
+                Blogs
+              </a>
+              <a
+                href="/contact"
                 className="block transition-colors hover:text-primary"
               >
                 Contact
+              </a>
+              <a
+                href="/about"
+                className="block transition-colors hover:text-primary"
+              >
+                About
               </a>
             </nav>
           </div>
           <div>
             <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
             <address className="space-y-2 text-sm not-italic">
-              <p>123 Innovation Street</p>
-              <p>Tech City, TC 12345</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Email: hello@example.com</p>
+              <p>123 Madison Avenue</p>
+              <p>New York, NY 10016</p>
+              <p>Phone: (530) 712-3425</p>
+              <p>Email: mail.essenceplc.com</p>
             </address>
           </div>
           <div className="relative">
