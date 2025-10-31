@@ -3,10 +3,49 @@ import { productsData } from "@/app/lib/products"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ArrowLeft } from "lucide-react"
+import { Metadata } from "next"
 import Link from "next/link"
 
 interface BlogDetailPageProps {
   params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({
+  params,
+}: BlogDetailPageProps): Promise<Metadata> {
+  const { slug } = await params
+  const blog = blogs.find((b) => b.id === slug)
+
+  if (!blog) {
+    return {
+      title: "Blog Post Not Found | Essence Store",
+      description: "The blog post you’re looking for could not be found.",
+    }
+  }
+
+  return {
+    title: `${blog.title} | Essence Store`,
+    description: blog.description,
+    openGraph: {
+      title: `${blog.title} | Essence Store`,
+      description: blog.description,
+      images: [
+        {
+          url: blog.image,
+          width: 800,
+          height: 600,
+          alt: blog.title,
+        },
+      ],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${blog.title} | Essence Store`,
+      description: blog.description,
+      images: [blog.image],
+    },
+  }
 }
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
