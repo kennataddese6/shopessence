@@ -1,5 +1,12 @@
 import { BlogCard } from "@/components/blog-card"
+import { Metadata } from "next"
 import { blogs } from "../lib/blogs"
+
+export const metadata: Metadata = {
+  title: "Shop Essence Blogs",
+  description:
+    "Blog articles curated to enhance your lifestyle, tech insights, and more. Dive into our latest posts and stay informed with Essence Store.",
+}
 
 export default function FeaturedBlogs() {
   return (
